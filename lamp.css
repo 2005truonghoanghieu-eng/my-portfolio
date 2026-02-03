@@ -1,0 +1,62 @@
+﻿.lamp-page{
+  text-align: center;
+}
+
+.scene{
+  width: 320px;
+  height: 320px;
+  margin: 30px auto;
+  perspective: 900px;  /* tạo hiệu ứng 3D */
+}
+
+.carousel{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spin 8s linear infinite;
+}
+
+/* Hover vào đèn thì dừng */
+.carousel:hover{
+  animation-play-state: paused;
+}
+
+/* Mỗi mặt */
+.face{
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  transform: rotateY(calc(var(--i) * 60deg)) translateZ(260px);
+}
+
+.face img{
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  border: 4px solid #fff;
+}
+
+/* quay vòng tròn */
+@keyframes spin{
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(360deg); }
+}
+
+.hint{
+  margin-top: 10px;
+}
+
+#btnToggle{
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#status{
+  margin-left: 10px;
+}

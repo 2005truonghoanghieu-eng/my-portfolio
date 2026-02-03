@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đèn kéo quân</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lamp.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="about.html">Giới thiệu</a>
+        <a href="contact.html">Liên hệ</a>
+        <a href="lamp.html">Đèn kéo quân</a>
+    </nav>
+
+    <section class="lamp-page">
+        <h2>🎡 Đèn kéo quân (6 mặt)</h2>
+        <p>Hover vào đèn để dừng – rê chuột ra để quay tiếp.</p>
+
+        <div class="scene">
+            <div class="carousel" id="carousel">
+                <div class="face" style="--i:0"><img src="images/l1.jpg" alt="1"></div>
+                <div class="face" style="--i:1"><img src="images/l2.jpg" alt="2"></div>
+                <div class="face" style="--i:2"><img src="images/l3.jpg" alt="3"></div>
+                <div class="face" style="--i:3"><img src="images/l4.jpg" alt="4"></div>
+                <div class="face" style="--i:4"><img src="images/l5.jpg" alt="5"></div>
+                <div class="face" style="--i:5"><img src="images/l6.jpg" alt="6"></div>
+            </div>
+        </div>
+
+        <div class="hint">
+            <button id="btnToggle">⏸️ Dừng / ▶️ Chạy</button>
+            <span id="status">Đang quay...</span>
+        </div>
+    </section>
+
+    <script src="lamp.js"></script>
+</body>
+</html>
